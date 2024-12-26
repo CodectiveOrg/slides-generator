@@ -65,6 +65,8 @@ body {
     justify-items: center;
     gap: 1rem;
 
+    zoom: 0.5;
+
     > section {
       background-color: var(--color-gray-20);
       color: var(--color-default-foreground);

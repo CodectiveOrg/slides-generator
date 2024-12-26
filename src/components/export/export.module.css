@@ -2,4 +2,7 @@
   position: fixed;
   inset-block-start: 1rem;
   inset-inline-end: 1rem;
+
+  display: grid;
+  gap: 1rem;
 }

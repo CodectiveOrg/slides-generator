@@ -23,7 +23,19 @@ async function addSlide(
 }
 
 export default function ExportComponent(): ReactElement {
+  const toggleView = (shrink: boolean): void => {
+    const page = document.querySelector<HTMLElement>("body > .page")!;
+
+    if (shrink) {
+      page.style.zoom = "0.5";
+    } else {
+      page.style.zoom = "1";
+    }
+  };
+
   const exportButtonClickHandler = async (): Promise<void> => {
+    toggleView(false);
+
     const pdf = new jsPDF({
       orientation: "landscape",
       unit: "px",
@@ -40,6 +52,8 @@ export default function ExportComponent(): ReactElement {
     }
 
     pdf.save("slides.pdf");
+
+    toggleView(true);
   };
 
   return (
