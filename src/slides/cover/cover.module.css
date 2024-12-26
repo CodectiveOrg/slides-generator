@@ -1,0 +1,5 @@
+.cover {
+  .title {
+    font-size: var(--fz-700);
+  }
+}

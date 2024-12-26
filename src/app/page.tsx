@@ -1,11 +1,13 @@
 import { ReactElement } from "react";
 
-import styles from "./page.module.css";
+import CoverSlide from "@/slides/cover/cover.slide";
 
 export default function Page(): ReactElement {
   return (
-    <div className={styles.home}>
-      <h1>سلام، رفیق!</h1>
+    <div className="page react">
+      <CoverSlide title="عنوان 1" />
+      <CoverSlide title="عنوان 2" />
+      <CoverSlide title="عنوان 3" />
     </div>
   );
 }

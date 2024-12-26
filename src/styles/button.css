@@ -1,0 +1,46 @@
+.button {
+  display: inline-block;
+
+  padding: 0.5rem 2rem;
+
+  border: none;
+  border-radius: var(--border-radius);
+
+  font-size: 1rem;
+  font-weight: 900;
+
+  cursor: pointer;
+
+  transition: var(--animation-duration-fast) ease-in-out;
+  transition-property: background-color;
+
+  &.primary {
+    background-image: var(--gradient-primary);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    color: var(--color-primary-opposite);
+
+    transition: background-position 0.5s ease-in-out;
+
+    @media (hover: hover) {
+      &:hover {
+        background-position: 0 0;
+      }
+    }
+  }
+
+  &.primary-opposite {
+    background-color: var(--color-primary-opposite);
+    color: var(--color-primary);
+  }
+
+  &.inline {
+    padding: 0.2rem 0.5rem;
+
+    font-weight: 700;
+  }
+
+  &.large {
+    padding: 1rem 2rem;
+  }
+}

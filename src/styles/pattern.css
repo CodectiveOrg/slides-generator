@@ -1,0 +1,50 @@
+.pattern {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  &::before {
+    --line-color: hsl(200deg 12% 80% / 20%);
+
+    content: "";
+
+    background-image: radial-gradient(
+        at center,
+        transparent,
+        var(--color-gray-90) 70%
+      ),
+      linear-gradient(
+        var(--line-color) 1px,
+        transparent 1px,
+        transparent 99px,
+        var(--line-color) 99px
+      ),
+      linear-gradient(
+        90deg,
+        var(--line-color) 1px,
+        transparent 1px,
+        transparent 99px,
+        var(--line-color) 99px
+      );
+    background-position:
+      center,
+      50px 50px,
+      50px 50px;
+    background-size:
+      100% 100%,
+      50px 50px,
+      50px 50px;
+    background-repeat: no-repeat, repeat, repeat;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+
+    block-size: 200%;
+    inline-size: 200%;
+
+    translate: -50% -50%;
+    rotate: 45deg;
+  }
+}
