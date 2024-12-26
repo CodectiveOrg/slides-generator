@@ -2,6 +2,8 @@ import { ReactElement } from "react";
 
 import type { Metadata } from "next";
 
+import ExportComponent from "@/components/export/export.component";
+
 import "@/styles/pattern.css";
 import "@/styles/button.css";
 import "@/styles/palette.css";
@@ -21,7 +23,10 @@ export default function RootLayout({
 }>): ReactElement {
   return (
     <html lang="fa" dir="rtl">
-      <body>{children}</body>
+      <body>
+        {children}
+        <ExportComponent />
+      </body>
     </html>
   );
 }

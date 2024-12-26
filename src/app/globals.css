@@ -25,6 +25,7 @@
 
 html {
   font-family: "Peyda", system-ui;
+  font-size: 150%;
 }
 
 input,
@@ -52,7 +53,7 @@ a {
 }
 
 body {
-  background-color: var(--color-default-foreground);
+  background-color: var(--color-gray-10);
   color: var(--color-default-background);
 
   padding: 2rem;
@@ -62,17 +63,30 @@ body {
   .page {
     display: grid;
     justify-items: center;
+    gap: 1rem;
 
     > section {
-      background-color: var(--color-default-background);
+      background-color: var(--color-gray-20);
       color: var(--color-default-foreground);
+      position: relative;
+      isolation: isolate;
 
-      block-size: 512px;
-      inline-size: 512px;
+      block-size: 1080px;
+      inline-size: 1080px;
 
-      margin: 1rem;
+      padding: 4rem;
 
-      border-radius: 1rem;
+      &::before {
+        content: "";
+
+        background-color: var(--color-default-background);
+
+        position: absolute;
+        inset: 2rem;
+        z-index: -1;
+
+        border-radius: 2rem;
+      }
     }
   }
 }

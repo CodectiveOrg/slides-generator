@@ -1,7 +1,5 @@
 import { ReactElement } from "react";
 
-import clsx from "clsx";
-
 import styles from "./cover.module.css";
 
 type Props = {
@@ -10,7 +8,7 @@ type Props = {
 
 export default function CoverSlide({ title }: Props): ReactElement {
   return (
-    <section className={clsx(styles.cover, "pattern")}>
+    <section className={styles.cover}>
       <div className={styles.title}>{title}</div>
     </section>
   );
