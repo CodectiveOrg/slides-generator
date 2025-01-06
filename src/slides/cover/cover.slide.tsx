@@ -4,12 +4,14 @@ import styles from "./cover.module.css";
 
 type Props = {
   title: string;
+  subtitle: string;
 };
 
-export default function CoverSlide({ title }: Props): ReactElement {
+export default function CoverSlide({ title, subtitle }: Props): ReactElement {
   return (
-    <section className={styles.cover}>
+    <div className={styles.cover}>
       <div className={styles.title}>{title}</div>
-    </section>
+      <div className={styles.subtitle}>{subtitle}</div>
+    </div>
   );
 }

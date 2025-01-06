@@ -1,5 +1,21 @@
 .cover {
+  display: grid;
+  place-content: center;
+
+  text-align: center;
+
   .title {
-    font-size: var(--fz-700);
+    font-size: var(--fz-900);
+    font-weight: 700;
+
+    line-height: 1;
+  }
+
+  .subtitle {
+    color: var(--color-primary);
+
+    font-size: var(--fz-800);
+
+    line-height: 1;
   }
 }

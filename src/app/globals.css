@@ -1,6 +1,6 @@
 :root {
-  --color-default-background: var(--color-gray-98);
-  --color-default-foreground: var(--color-gray-10);
+  --color-default-background: var(--color-gray-10);
+  --color-default-foreground: var(--color-gray-98);
 
   --color-subscribe-background: hsl(50deg 100% 50%);
   --color-subscribe-foreground: var(--color-gray-10);
@@ -53,7 +53,7 @@ a {
 }
 
 body {
-  background-color: var(--color-gray-10);
+  background-color: var(--color-default-foreground);
   color: var(--color-default-background);
 
   padding: 2rem;
@@ -68,7 +68,7 @@ body {
     zoom: 0.5;
 
     > section {
-      background-color: var(--color-gray-20);
+      background-color: var(--color-default-background);
       color: var(--color-default-foreground);
       position: relative;
       isolation: isolate;
@@ -76,19 +76,7 @@ body {
       block-size: 1080px;
       inline-size: 1080px;
 
-      padding: 4rem;
-
-      &::before {
-        content: "";
-
-        background-color: var(--color-default-background);
-
-        position: absolute;
-        inset: 2rem;
-        z-index: -1;
-
-        border-radius: 2rem;
-      }
+      padding: 2rem;
     }
   }
 }

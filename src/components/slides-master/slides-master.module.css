@@ -1,0 +1,58 @@
+.slide-wrapper {
+  --inset: 1rem;
+
+  position: relative;
+
+  .page-number {
+    position: absolute;
+    inset-block-start: var(--inset);
+    inset-inline-end: var(--inset);
+
+    font-size: var(--fz-500);
+    font-weight: 700;
+  }
+
+  .author {
+    position: absolute;
+    inset-block-end: var(--inset);
+    inset-inline-start: var(--inset);
+
+    .username,
+    .channel {
+      grid-area: channel;
+
+      display: flex;
+      align-items: center;
+      gap: 0.2rem;
+
+      letter-spacing: 2px;
+
+      svg {
+        transform: translateY(-0.1em);
+
+        font-size: 1.2em;
+      }
+    }
+  }
+
+  .swipe {
+    position: absolute;
+    inset-block-end: var(--inset);
+    inset-inline-start: var(--inset);
+
+    display: flex;
+    align-items: center;
+
+    font-weight: 300;
+
+    svg {
+      color: var(--color-primary);
+
+      font-size: 2em;
+    }
+  }
+
+  :last-child {
+    block-size: 100%;
+  }
+}
