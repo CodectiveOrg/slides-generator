@@ -26,6 +26,9 @@
 html {
   font-family: "Peyda", system-ui;
   font-size: 150%;
+
+  letter-spacing: 1px;
+  word-spacing: 4px;
 }
 
 input,

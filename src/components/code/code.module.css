@@ -1,0 +1,27 @@
+.code {
+  overflow: hidden;
+
+  border-radius: var(--border-radius);
+
+  pre {
+    padding: 1rem;
+
+    font-family: "JetBrains Mono", monospace;
+    line-height: 1.5;
+
+    > div {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+
+  .line-number {
+    opacity: 0.5;
+
+    min-inline-size: 2ch;
+  }
+
+  .line-content {
+    flex: 1;
+  }
+}

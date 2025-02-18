@@ -1,0 +1,10 @@
+.basic {
+  display: grid;
+  align-content: start;
+  gap: 1rem;
+
+  .title {
+    font-size: var(--fz-700);
+    font-weight: 700;
+  }
+}
