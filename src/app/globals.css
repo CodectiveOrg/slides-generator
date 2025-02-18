@@ -11,7 +11,7 @@
   --color-box-shadow-subtle: hsl(0deg 0% 10% / 12%);
   --box-shadow-subtle: 0 0.2rem 0.5rem 0 var(--color-box-shadow-subtle);
 
-  --border-radius: 0.25rem;
+  --border-radius: 0.5rem;
 }
 
 *,
@@ -82,4 +82,14 @@ body {
       padding: 2rem;
     }
   }
+}
+
+code {
+  background-color: var(--color-gray-20);
+
+  padding: 0.25rem 0.5rem;
+
+  border-radius: var(--border-radius);
+
+  font-family: "JetBrains Mono", monospace;
 }

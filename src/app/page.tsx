@@ -21,11 +21,32 @@ html {
         `}
         />
         <p>
-          این کد به مرورگر میگه برای تمام المان‌ها از نسخه‌ی دارک استفاده کنه؛
+          این کد به مرورگر میگه برای تمام المان‌های صفحه از نسخه‌ی تیره استفاده
+          کنه.
         </p>
         <p>
-          یعنی Scrollbar و Checkbox Input و Date Picker و Select و خیلی از
-          المان‌های دیگه.
+          یعنی Scrollbar و Button و Checkbox Input و Date Picker و Select و خیلی
+          از المان‌های دیگه.
+        </p>
+      </BasicSlide>
+      <BasicSlide title="دو مقدار همزمان">
+        <p>همچنین میشه از دو مقدار به طور همزمان استفاده کرد:</p>
+        <CodeComponent
+          language="css"
+          code={`
+html {
+  color-scheme: light dark;
+}
+        `}
+        />
+        <p>
+          اینجوری به مرورگر میگیم که سایت ما، هم از Light Mode و هم از Dark Mode
+          پشتیبانی میکنه.
+        </p>
+        <p>بنابراین با توجه به تنظیمات سیستم کاربر، تم سایت مشخص میشه.</p>
+        <p>
+          اگه کاربر اولویت خاصی نداشته باشه، اولین مقدار در نظر گرفته میشه که
+          اینجا برابر با <code>light</code> ئه.
         </p>
       </BasicSlide>
     </SlidesMasterComponent>
