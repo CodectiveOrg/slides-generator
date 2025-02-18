@@ -14,9 +14,11 @@ export default function Page(): ReactElement {
         <p>برای فعال‌سازی دارک مود، کافیه این کد رو به فایل HTML اضافه کنید:</p>
         <CodeComponent
           language="css"
-          code={`html {
+          code={`
+html {
   color-scheme: dark;
-}`}
+}
+        `}
         />
         <p>
           این کد به مرورگر میگه برای تمام المان‌ها از نسخه‌ی دارک استفاده کنه؛

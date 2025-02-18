@@ -12,15 +12,15 @@ type Props = {
 export default function CodeComponent({ language, code }: Props): ReactElement {
   return (
     <div className={styles.code} dir="ltr">
-      <Highlight theme={themes.vsDark} code={code} language={language}>
+      <Highlight theme={themes.vsDark} code={code.trim()} language={language}>
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
           <pre className={className} style={style}>
-            {tokens.map((line, i) => (
-              <div key={i} {...getLineProps({ line })}>
-                <span className={styles["line-number"]}>{i + 1}</span>
+            {tokens.map((line, lineIndex) => (
+              <div key={lineIndex} {...getLineProps({ line })}>
+                <span className={styles["line-number"]}>{lineIndex + 1}</span>
                 <span className={styles["line-content"]}>
-                  {line.map((token, key) => (
-                    <span key={key} {...getTokenProps({ token })} />
+                  {line.map((token, tokenIndex) => (
+                    <span key={tokenIndex} {...getTokenProps({ token })} />
                   ))}
                 </span>
               </div>
