@@ -4,10 +4,11 @@
   gap: 1rem;
 
   .socials {
+    display: grid;
+    gap: 2.5rem;
+
     > li {
       position: relative;
-
-      margin-block-end: 2.5rem;
 
       text-align: center;
 
