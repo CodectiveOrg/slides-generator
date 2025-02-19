@@ -2,8 +2,10 @@
 
 import { ReactElement } from "react";
 
+import { useSelectedLayoutSegment } from "next/navigation";
+
 import { jsPDF } from "jspdf";
-import html2canvas from "html2canvas";
+import { toPng } from "html-to-image";
 
 import styles from "./export.module.css";
 
@@ -12,17 +14,18 @@ async function addSlide(
   slide: HTMLElement,
   index: number,
 ): Promise<void> {
-  const canvas = await html2canvas(slide);
-  const imgData = canvas.toDataURL("image/png");
+  const imageData = await toPng(slide);
 
   if (index > 0) {
     pdf.addPage();
   }
 
-  pdf.addImage(imgData, "PNG", 0, 0, 1080, 1080);
+  pdf.addImage(imageData, "PNG", 0, 0, 1080, 1080);
 }
 
 export default function ExportComponent(): ReactElement {
+  const segment = useSelectedLayoutSegment();
+
   const toggleView = (shrink: boolean): void => {
     const page = document.querySelector<HTMLElement>("body > .page")!;
 
@@ -51,7 +54,7 @@ export default function ExportComponent(): ReactElement {
       await addSlide(pdf, slide, i);
     }
 
-    pdf.save("slides.pdf");
+    pdf.save(`${segment}.pdf`);
 
     toggleView(true);
   };
