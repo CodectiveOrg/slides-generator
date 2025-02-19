@@ -5,6 +5,7 @@ import CodeComponent from "@/components/code/code.component";
 
 import CoverSlide from "@/slides/cover/cover.slide";
 import BasicSlide from "@/slides/basic/basic.slide";
+import ClosingSlide from "@/slides/closing/closing.slide";
 
 export default function Page(): ReactElement {
   return (
@@ -49,6 +50,7 @@ html {
           اینجا برابر با <code>light</code> ئه.
         </p>
       </BasicSlide>
+      <ClosingSlide />
     </SlidesMasterComponent>
   );
 }

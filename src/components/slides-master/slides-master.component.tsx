@@ -3,7 +3,7 @@ import { Children, PropsWithChildren, ReactElement } from "react";
 import clsx from "clsx";
 
 import MingcuteArrowsRightLine from "@/icons/MingcuteArrowsRightLine";
-import MingcuteLinkedinFill from "@/icons/MingcuteLinkedinFill";
+import SimpleIconsLinkedin from "@/icons/SimpleIconsLinkedin";
 import MingcuteTelegramFill from "@/icons/MingcuteTelegramFill";
 
 import styles from "./slides-master.module.css";
@@ -24,15 +24,13 @@ export default function SlidesMasterComponent({
         <section className={styles["slide-wrapper"]} key={index + 1}>
           <div className={styles["page-number"]}>{index + 1}</div>
           <div dir="ltr" className={styles.author}>
-            <div className={styles.writings}>
-              <div className={styles.username}>
-                <MingcuteLinkedinFill />
-                BijanProgrammer
-              </div>
-              <div className={styles.channel}>
-                <MingcuteTelegramFill />
-                Codective
-              </div>
+            <div className={styles.username}>
+              <SimpleIconsLinkedin />
+              BijanProgrammer
+            </div>
+            <div className={styles.channel}>
+              <MingcuteTelegramFill />
+              Codective
             </div>
           </div>
           <div className={styles.swipe}>
