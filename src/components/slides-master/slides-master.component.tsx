@@ -2,11 +2,14 @@ import { Children, PropsWithChildren, ReactElement } from "react";
 
 import clsx from "clsx";
 
+import bijanPortrait from "@/assets/portraits/bijan.webp";
+
 import MingcuteArrowsRightLine from "@/icons/MingcuteArrowsRightLine";
 import SimpleIconsLinkedin from "@/icons/SimpleIconsLinkedin";
 import MingcuteTelegramFill from "@/icons/MingcuteTelegramFill";
 
 import styles from "./slides-master.module.css";
+import Image from "next/image";
 
 type Palette = "default" | "react" | "next";
 
@@ -23,6 +26,14 @@ export default function SlidesMasterComponent({
       {Children.map(children, (child, index) => (
         <section className={styles["slide-wrapper"]} key={index + 1}>
           <div className={styles["page-number"]}>{index + 1}</div>
+          <div className={styles.portrait}>
+            <Image src={bijanPortrait} alt="" />
+            <div className={styles.name}>
+              بیژن
+              <br />
+              عیسی‌پور
+            </div>
+          </div>
           <div dir="ltr" className={styles.author}>
             <div className={styles.username}>
               <SimpleIconsLinkedin />

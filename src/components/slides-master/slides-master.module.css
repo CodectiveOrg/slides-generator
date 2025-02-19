@@ -11,6 +11,27 @@
     font-weight: 700;
   }
 
+  .portrait {
+    position: absolute;
+    inset-block-start: var(--inset);
+    inset-inline-start: var(--inset);
+
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    img {
+      block-size: 3em;
+      inline-size: auto;
+
+      border-radius: 1rem;
+    }
+
+    .name {
+      line-height: 1;
+    }
+  }
+
   .author {
     position: absolute;
     inset-block-end: var(--inset);
@@ -58,8 +79,13 @@
     block-size: 100%;
   }
 
+  &:not(:first-child) {
+    .portrait {
+      display: none;
+    }
+  }
+
   &:last-child {
-    .page-number,
     .author,
     .swipe {
       display: none;
