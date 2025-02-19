@@ -57,4 +57,12 @@
   > :last-child {
     block-size: 100%;
   }
+
+  &:last-child {
+    .page-number,
+    .author,
+    .swipe {
+      display: none;
+    }
+  }
 }
