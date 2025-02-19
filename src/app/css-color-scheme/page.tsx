@@ -26,8 +26,8 @@ html {
           کنه.
         </p>
         <p>
-          یعنی Scrollbar و Button و Checkbox Input و Date Picker و Select و خیلی
-          از المان‌های دیگه.
+          یعنی Body و Scrollbar و Button و Input و Checkbox و Select و Date
+          Picker و خیلی از المان‌های دیگه.
         </p>
       </BasicSlide>
       <BasicSlide title="دو مقدار همزمان">
