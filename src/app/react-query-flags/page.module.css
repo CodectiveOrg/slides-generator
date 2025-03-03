@@ -1,0 +1,9 @@
+.subtitle.subtitle {
+  margin-block-start: 2rem;
+
+  font-size: var(--fz-500);
+}
+
+.tanstack-logo {
+  margin-inline: auto;
+}

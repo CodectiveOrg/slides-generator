@@ -24,4 +24,12 @@
   .line-content {
     flex: 1;
   }
+
+  &.medium {
+    font-size: var(--fz-300);
+  }
+
+  &.large {
+    font-size: var(--fz-400);
+  }
 }

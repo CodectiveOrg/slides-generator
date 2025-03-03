@@ -1,17 +1,26 @@
-import { ReactElement } from "react";
+import { ReactElement, ReactNode } from "react";
+
+import clsx from "clsx";
 
 import styles from "./cover.module.css";
 
 type Props = {
-  title: string;
-  subtitle: string;
+  title: ReactNode;
+  titleClassName?: string;
+  subtitle: ReactNode;
+  subtitleClassName?: string;
 };
 
-export default function CoverSlide({ title, subtitle }: Props): ReactElement {
+export default function CoverSlide({
+  title,
+  titleClassName,
+  subtitle,
+  subtitleClassName,
+}: Props): ReactElement {
   return (
     <div className={styles.cover}>
-      <div className={styles.title}>{title}</div>
-      <div className={styles.subtitle}>{subtitle}</div>
+      <div className={clsx(styles.title, titleClassName)}>{title}</div>
+      <div className={clsx(styles.subtitle, subtitleClassName)}>{subtitle}</div>
     </div>
   );
 }

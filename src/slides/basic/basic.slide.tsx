@@ -1,9 +1,9 @@
-import { PropsWithChildren, ReactElement } from "react";
+import { PropsWithChildren, ReactElement, ReactNode } from "react";
 
 import styles from "./basic.module.css";
 
 type Props = PropsWithChildren<{
-  title?: string;
+  title?: ReactNode;
 }>;
 
 export default function BasicSlide({ children, title }: Props): ReactElement {
