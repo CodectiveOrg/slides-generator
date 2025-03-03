@@ -20,10 +20,7 @@ export default function Page(): ReactElement {
         title="React Query"
         subtitle={
           <>
-            <code>isFetching</code>
-            vs
-            <code>isPending</code>
-            vs
+            <code>isFetching</code> vs <code>isPending</code> vs{" "}
             <code>isLoading</code>
           </>
         }
