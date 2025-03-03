@@ -1,7 +1,5 @@
 import { ReactElement } from "react";
 
-import Image from "next/image";
-
 import tanstackLogo from "@/assets/logo/tanstack.png";
 
 import SlidesMasterComponent from "@/components/slides-master/slides-master.component";
@@ -35,9 +33,9 @@ export default function Page(): ReactElement {
           اسم‌هایی که اینجا ذکر میشه، مربوط به آخرین نسخه‌ست که در حال حاضر ورژن
           5 محسوب میشه.
         </p>
-        <Image
+        <img
           className={styles["tanstack-logo"]}
-          src={tanstackLogo}
+          src={tanstackLogo.src}
           alt=""
           width={500}
           height={500}

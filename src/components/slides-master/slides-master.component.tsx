@@ -9,7 +9,6 @@ import SimpleIconsLinkedin from "@/icons/SimpleIconsLinkedin";
 import MingcuteTelegramFill from "@/icons/MingcuteTelegramFill";
 
 import styles from "./slides-master.module.css";
-import Image from "next/image";
 
 type Palette = "default" | "react" | "next";
 
@@ -27,7 +26,7 @@ export default function SlidesMasterComponent({
         <section className={styles["slide-wrapper"]} key={index + 1}>
           <div className={styles["page-number"]}>{index + 1}</div>
           <div className={styles.portrait}>
-            <Image src={bijanPortrait} alt="" />
+            <img src={bijanPortrait.src} alt="" />
             <div className={styles.name}>
               بیژن
               <br />
